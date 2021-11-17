@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #393e50;
+    background-image: url(images/landing-bg-pattern.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    color: white;
+    box-sizing: content-box;
+    overflow: hidden;
+    height: 100vh;
+}
+
+nav {
+    margin: 50px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo p {
+    margin: 0;
+}
+
+.theme {
+    padding: 15px;
+    height: max-content;
+    border: 2px solid white;
+    border-radius: 3px;
+    text-decoration: unset;
+    color: white;
+}
+
+.theme:hover {
+    background-color: #fcef57;
+    border: none;
+    color: black;
+}
+
+main {
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    overflow: hidden;
+}
+
+.sports {
+    width: 100%;
+    margin: 60px;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+    height: max-content;
+}
+
+.player1 {
+    width: 100%;
+}
+
+.sport {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    height: max-content;
+    gap: 50px;
+    border-radius: 5px;
+}
+
+.sport::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -15px;
+    width: 115%;
+    height: 60px;
+    background-color: #393e50;
+    transform: rotate(5deg);
+    transition: transform .5s;
+}
+
+.sport:hover::before{
+    transform: rotate(7deg);
+}
+.sport:hover .image{
+    transform: scale(1.1);
+}
+.infos {
+    width: 100%;
+}
+
+.image {
+    transition: transform .5s;
+    width: 100%;
+    z-index: 20;
+}
+
+.number {
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.39);
+}
+
+.name {
+    text-align: center;
+}
+
+#soccer {
+    background: linear-gradient(#3db079, #7ac277, #c2d875);
+}
+
+#baseball {
+    background: linear-gradient(#93dbaa, #7bccc6, #66bede);
+}
+
+#billiards {
+    background: linear-gradient(#fce25e, #fab570, #f98d81);
+}
+
+#rugby {
+    background: linear-gradient(#526296, #6282b6);
+}
+
+#basketball {
+    background: linear-gradient(#f2a54a, #f6bf79);
+}
+
+#bowling {
+    background: linear-gradient(#434bbe, #59b0d0);
+}
