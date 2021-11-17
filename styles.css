@@ -3,14 +3,13 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Kanit', sans-serif;
     background-color: #393e50;
     background-image: url(images/landing-bg-pattern.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
     color: white;
-    box-sizing: content-box;
     overflow: hidden;
     height: 100vh;
 }
@@ -46,7 +45,6 @@ main {
     height: 100%;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     overflow: hidden;
 }
 
@@ -60,10 +58,21 @@ main {
     height: max-content;
 }
 
-.player1 {
+.player1, .player2 {
     width: 100%;
+    transition: transform 1s;
+    z-index: 10000;
 }
-
+.player1:hover{
+    transform: rotate(40deg);
+}
+#player2 {
+    width: 100%;
+    transition: transform 1s;
+}
+.player2:hover{
+    transform: rotate(-40deg);
+}
 .sport {
     position: relative;
     padding: 20px;
@@ -132,4 +141,17 @@ main {
 
 #bowling {
     background: linear-gradient(#434bbe, #59b0d0);
+}
+
+@media screen and (min-width:2000px) {
+    nav{
+        margin-top: 100px;
+    }
+    .player1,.player2{
+        margin: 100px;
+        margin-top: 320px;
+    }
+    .sports{
+        margin-top: 300px;
+    }
 }
